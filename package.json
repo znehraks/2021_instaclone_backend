@@ -27,7 +27,8 @@
     "bcrypt": "^5.0.1",
     "dotenv": "^10.0.0",
     "graphql": "^15.5.2",
-    "graphql-tools": "^8.2.0"
+    "graphql-tools": "^8.2.0",
+    "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
