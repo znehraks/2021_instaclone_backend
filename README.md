@@ -11,5 +11,9 @@ Instaclone Backend
 - [x] Login
 - [x] Edit Profile
 - [x] Change Avatar (Image Upload)
-- [ ] Follow User
-- [ ] UnFollow User
+- [x] Follow User
+- [x] UnFollow User
+- [x] See Followers
+- [x] See Following
+- [ ] Computed Fields
+- [ ] Search Users
