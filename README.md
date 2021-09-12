@@ -15,5 +15,22 @@ Instaclone Backend
 - [x] UnFollow User
 - [x] See Followers
 - [x] See Following
-- [ ] Computed Fields
-- [ ] Search Users
+- [x] Computed Fields
+- [x] Search Users
+
+## Photos
+
+- [x] Upload Photo (Parse #)
+- [x] See Hashtags
+- [] See Photo
+- [ ] Search Photos
+- [ ] Edit Photo
+- [ ] Like / Unlike photo
+- [ ] See Photo Likes
+- [ ] See Feed
+
+## Comments
+
+- [ ] Comment on Photo
+- [ ] Edit Comment
+- [ ] Delete Comment
