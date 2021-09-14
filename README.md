@@ -21,12 +21,12 @@ Instaclone Backend
 ## Photos
 
 - [x] Upload Photo (Parse #)
+- [x] See Photo
 - [x] See Hashtags
-- [] See Photo
-- [ ] Search Photos
-- [ ] Edit Photo
-- [ ] Like / Unlike photo
-- [ ] See Photo Likes
+- [x] Search Photos
+- [x] Edit Photo
+- [x] Like / Unlike photo
+- [x] See Photo Likes
 - [ ] See Feed
 
 ## Comments

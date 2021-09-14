@@ -56,5 +56,15 @@ export default {
       });
       return Boolean(exists);
     },
+    //pagination 으로 수정
+
+    photos: ({ id }) =>
+      client.user
+        .findUnique({
+          where: {
+            id,
+          },
+        })
+        .photos(),
   },
 };
