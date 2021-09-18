@@ -1,7 +1,5 @@
 # InstaClone
 
-Instaclone Backend.
-
 Instaclone Backend
 
 ## User:
@@ -27,10 +25,28 @@ Instaclone Backend
 - [x] Edit Photo
 - [x] Like / Unlike photo
 - [x] See Photo Likes
-- [ ] See Feed
+- [x] See Feed
+- [x] See Photo Comments
+- [x] Is Mine (Delete Photo)
 
 ## Comments
 
-- [ ] Comment on Photo
-- [ ] Edit Comment
-- [ ] Delete Comment
+- [x] Comment on Photo
+- [x] Edit Comment
+- [x] Delete Comment
+
+## Refactor
+
+- [x] Mutation Response
+
+## Extras
+
+- [x] S3 Image Upload
+
+## DM
+
+- [] Create Room
+- [x] See Room
+- [] See Rooms
+- [] Send Message
+- [] Realtime Messages
