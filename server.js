@@ -6,7 +6,6 @@ import { makeExecutableSchema } from "@graphql-tools/schema";
 import express from "express";
 import logger from "morgan";
 import { ApolloServer } from "apollo-server-express";
-import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import { typeDefs, resolvers } from "./schema";
 import { getUser } from "./users/users.utils";
 import { graphqlUploadExpress } from "graphql-upload";
@@ -22,14 +21,32 @@ const startServer = async () => {
   });
 
   const subscriptionServer = SubscriptionServer.create(
-    { schema, execute, subscribe },
+    {
+      schema,
+      execute,
+      subscribe,
+      // onConnect: async ({ authorization }, webSocket, context) => {
+      //   console.log(authorization);
+      //   console.log(webSocket);
+      //   console.log(context);
+      //   if (!authorization) {
+      //     throw new Error("You can't listen.");
+      //   }
+      //   const loggedInUser = await getUser(authorization);
+      //   console.log("Connected!");
+      //   return loggedInUser;
+      // },
+      // onDisconnect(webSocket, context) {
+      //   console.log("Disconnected!");
+      // },
+    },
     { server: httpServer }
   ); //subscriptions 서버를 만듭니다.
 
   const server = new ApolloServer({
     schema,
     context: async ({ req }) => {
-      if (req) {
+      if ({ req }) {
         return {
           loggedInUser: await getUser(req.headers.authorization),
         };
@@ -53,7 +70,7 @@ const startServer = async () => {
   app.use(logger("tiny"));
   app.use(graphqlUploadExpress());
   server.applyMiddleware({ app });
-  app.use("/static", express.static("uploads"));
+  // app.use("/static", express.static("uploads"));
 
   httpServer.listen(PORT, () =>
     console.log(
