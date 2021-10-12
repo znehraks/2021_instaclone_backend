@@ -31,6 +31,9 @@ export default {
           where: {
             id,
           },
+          orderBy: {
+            createdAt: "asc",
+          },
         })
         .user(),
   },
