@@ -25,9 +25,9 @@ model User {
   following User[]    @relation("FollowRelation", references: [id])
   comments  Comment[]
   rooms     Room[]
-  message   Message[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
+  Message   Message[]
 }
 
 model Photo {
@@ -37,9 +37,9 @@ model Photo {
   file      String
   caption   String?
   hashtags  Hashtag[]
-  likes     Like[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
+  likes     Like[]
   comments  Comment[]
 }
 
@@ -49,7 +49,6 @@ model Hashtag {
   photos    Photo[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
 }
 
 model Like {
@@ -69,10 +68,10 @@ model Comment {
   user      User     @relation(fields: [userId], references: [id])
   photo     Photo    @relation(fields: [photoId], references: [id])
   payload   String
-  userId    Int
-  photoId   Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  userId    Int
+  photoId   Int
 }
 
 model Room {
